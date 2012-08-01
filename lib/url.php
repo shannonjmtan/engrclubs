@@ -5,7 +5,7 @@
  * 
  * @package foundation
  * @author Eric Bollens
- * @version 20120111
+ * @version 20120801
  * @copyright Copyright (c) 2012 UC Regents
  */
 
@@ -55,5 +55,10 @@ class URL
         $url = isset($CONFIG->url) ? $CONFIG->url : '';
         
         return $url.'/assets/'.$name;
+    }
+    
+    public static function blocks($name)
+    {
+        return self::asset('blocks/'.$name);
     }
 }
