@@ -72,8 +72,8 @@ mkdir your-app
 cd your-app
 git init
 git remote add origin git@github.com:ucla/your-app.git # change "your-app" to repository name
-git remote add upstream git@github.com:ucla/ecta.git
-git pull upstream master
+git remote add framework git@github.com:ucla/ecta.git
+git pull framework master
 git push -u origin master
 ```
 
@@ -85,7 +85,7 @@ the ecta (upstream) repository, but rather only your app's repository (origin).
 In the event that you seek to later update the framework, you can do this as:
 
 ```
-git pull upstream master
+git pull framework master
 ```
 
 This will pull down the latest version of the framework from the ECTA repository.
