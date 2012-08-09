@@ -46,7 +46,7 @@ WebBlocks build will overwrite this directory completely.
 
 Going further than simply defining additional CSS, one may incorporate style
 definitions directly into the WebBlocks build (with SASS and Compass) by editing
-the files in `/src/sass`, namely `site.scss` for all visitors and `site-ie.scss`
+the files in `/src/sass`, namely `blocks.scss` for all visitors and `blocks-ie.scss`
 for visitors using Internet Explorer 8 and below. In order for definitions
 within `/src/sass` to be applied to the application, one must run the WebBlocks
 build script by invoking the command `rake` from the root directory of the ECTA
