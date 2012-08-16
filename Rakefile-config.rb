@@ -8,7 +8,7 @@ rootdir = File.dirname(Pathname.new(__FILE__).realpath)
 # The directory into which WebBlocks is built
 WebBlocks.config[:build][:dir] = "#{rootdir}/www/assets/blocks"
 
-# The directory where all
+# The directory where sources for the build are located
 WebBlocks.config[:src][:dir] = "#{rootdir}/src"
 
 # Bootstrap plugins that should be included in the build
