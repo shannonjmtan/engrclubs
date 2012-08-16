@@ -68,3 +68,19 @@ end
 task :reset => [:clean_all] do
   blocks.rake 'reset'
 end
+
+task :environment do
+  blocks.rake 'environment'
+end
+
+task :paths do
+  blocks.rake 'paths'
+end
+
+task :includes do
+  blocks.rake 'includes'
+end
+
+task :packages do
+  blocks.rake 'packages'
+end
