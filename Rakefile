@@ -62,6 +62,9 @@ end
 task :init do
   sh "git submodule init"
   sh "git submodule update"
+  Dir.chdir('package/WebBlocks') do
+    sh "npm install"
+  end
   blocks.rake 'init'
 end
 
