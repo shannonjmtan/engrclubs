@@ -23,10 +23,9 @@ class WebBlocks
   end
   
   def rake(command = '')
-    pwd = Dir.pwd
-    Dir.chdir @path
-    sh "rake #{command} -- --config=../../Rakefile-config.rb"
-    Dir.chdir pwd
+    Dir.chdir @path do
+      sh "rake #{command} -- --config=../../Rakefile-config.rb"
+    end
   end
   
 end
