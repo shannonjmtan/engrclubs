@@ -352,6 +352,28 @@ class Active_Record_Model
         $result->num_rows === 1 :
         $result->num_rows === 0 ;
     }
+    
+    public static function build_all($table, $key_col)
+    {
+        $query = 'SELECT * FROM `'.$table.'`';
+        
+        $result = DB::mysqli()->query($query);
+        
+        if($result === false)
+            throw new Active_Record_Model_Exception('MySQL Error: '.DB::mysqli()->error);
+        
+        $classname = get_called_class();
+        
+        $arr = array();
+        while($row = $result->fetch_assoc())
+        {
+            $obj = new $classname($row[$key_col]);
+            $obj->load($row);
+            $arr[$row[$key_col]] = $obj;
+        }
+        
+        return $arr;
+    }
 
     /**
      * Create a new tuple from the data in the write buffer.
