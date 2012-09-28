@@ -24,7 +24,7 @@ class WebBlocks
   
   def rake(command = '')
     Dir.chdir @path do
-      sh "rake #{command} -- --config=../../Rakefile-config.rb"
+        sh "rake #{command} -- --config=../../Rakefile-config.rb"
     end
   end
   
@@ -38,51 +38,43 @@ task :default => [:init] do
   blocks.rake
 end
 
-task :build => [:init] do
-  blocks.rake 'build'
-end
-
-task :build_all => [:init] do
-  blocks.rake 'build_all'
-end
-
-task :clean => [:init] do
-  blocks.rake 'clean'
-end
-
-task :clean_all => [:init] do
-  blocks.rake 'clean_all'
-end
-
-task :check => [:init] do
-  blocks.rake 'check'
-end
-
-task :init do
+task :_init do
   sh "git submodule init"
   sh "git submodule update"
   Dir.chdir('package/WebBlocks') do
+    sh "bundle"
     sh "npm install"
   end
+end
+
+task :init => [:_init] do
   blocks.rake 'init'
 end
 
-task :reset => [:clean_all] do
-  blocks.rake 'reset'
+task :build => [:_init] do
+  blocks.rake 'build'
 end
 
-task :environment do
-  blocks.rake 'environment'
+task :build_all => [:_init] do
+  blocks.rake 'build_all'
 end
 
-task :paths do
-  blocks.rake 'paths'
+task :clean => [:_init] do
+  blocks.rake 'clean'
 end
 
-task :includes do
-  blocks.rake 'includes'
+task :clean_packages => [:_init] do
+  blocks.rake 'clean_packages'
 end
 
-task :packages do
-  blocks.rake 'packages'
+task :clean_all => [:_init] do
+  blocks.rake 'clean_all'
+end
+
+task :reset_packages => [:_init] do
+  blocks.rake 'reset_packages'
+end
+
+task :reset => [:_init] do
+  blocks.rake 'reset_packages'
 end
