@@ -27,8 +27,10 @@ stem from WebBlocks, a submodule leveraged by this framework. They are not
 necessary if one plans simply to use the WebBlocks source compiled as is, but
 they are highly recommended within the ECTA workflow given the power of SASS.
 
-NOTE: Use of WebBlocks requires access to the WebBlocks project, as it is 
-checked out in this repository as a Git submodule.
+NOTE: Use of WebBlocks within ECTA requires access to the WebBlocks project, as 
+WebBlocks is checked out as a submodule. Given that WebBlocks is still under 
+development, the repository is not publicly available, but you can request
+access by contacting Eric Bollens <ebollens@oit.ucla.edu>.
 
 ### Installation
 
