@@ -3,9 +3,13 @@
 ## Overview
 
 This framework is used by the Education and Collaboration Technology Group's 
-Architecture Team (ECTA) for rapid, object-oriented PHP development. It includes
-a number of PHP libraries, as well as the WebBlocks responsive framework, and
-can serve as a baseline to fork from when developing applications within ECTA.
+Architecture Team (ECTA) within UCLA's Office of Information Technology for 
+rapid, object-oriented PHP development. It includes a number of PHP libraries, 
+as well as integration with the WebBlocks responsive framework, and can serve as
+ a baseline to fork from when developing applications within ECTA.
+
+This framework is licensed under the BSD 3-clause license (see /LICENSE file). 
+It is maintained by Eric Bollens <ebollens@oit.ucla.edu>.
 
 ## Installation
 
@@ -22,6 +26,9 @@ through the use of late static binding and namespaces. The latter pair, meanwhil
 stem from WebBlocks, a submodule leveraged by this framework. They are not
 necessary if one plans simply to use the WebBlocks source compiled as is, but
 they are highly recommended within the ECTA workflow given the power of SASS.
+
+NOTE: Use of WebBlocks requires access to the WebBlocks project, as it is 
+checked out in this repository as a Git submodule.
 
 ### Installation
 
