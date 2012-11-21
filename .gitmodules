@@ -1,3 +1,0 @@
-[submodule "package/WebBlocks"]
-	path = package/WebBlocks
-	url = git@github.com:ucla/WebBlocks.git
