@@ -59,6 +59,18 @@ task :build_all => [:_init] do
   blocks.rake 'build_all'
 end
 
+task :build_css => [:_init] do
+  blocks.rake 'build_css'
+end
+
+task :build_img => [:_init] do
+  blocks.rake 'build_img'
+end
+
+task :build_js => [:_init] do
+  blocks.rake 'build_js'
+end
+
 task :clean => [:_init] do
   blocks.rake 'clean'
 end
