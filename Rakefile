@@ -10,37 +10,49 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 require 'rake'
-include Rake::DSL
 
 # Definitions
 
+include Rake::DSL
+
 class WebBlocks
-  
+
   attr_accessor :path
-    
-  def initialize(path)
+
+  def initialize(path, args)
     @path = path
+    @args = args
   end
-  
+
   def rake(command = '')
     Dir.chdir @path do
-        sh "rake #{command} -- --config=../../Rakefile-config.rb"
+        sh "rake #{command} -- --config=../../Rakefile-config.rb #{@args}"
     end
   end
-  
+
 end
 
-blocks = WebBlocks.new('package/WebBlocks')
+args = ''
+ARGV.each do |arg|
+  next if arg[0,1] != '-' and args == ''
+  args += " #{arg}"
+end
+
+blocks = WebBlocks.new('package/WebBlocks', args)
 
 # Tasks
 
-task :default => [:init] do
+task :default => [:_init] do
   blocks.rake
 end
 
 task :_init do
-  sh "git submodule init"
-  sh "git submodule update"
+  IO.popen("git rev-parse --show-toplevel") do |io|
+    Dir.chdir(io.gets.strip) do
+      sh "git submodule init"
+      sh "git submodule update"
+    end
+  end
   Dir.chdir('package/WebBlocks') do
     sh "bundle"
     sh "npm install"
@@ -88,5 +100,5 @@ task :reset_packages => [:_init] do
 end
 
 task :reset => [:_init] do
-  blocks.rake 'reset_packages'
+  blocks.rake 'reset'
 end
