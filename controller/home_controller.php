@@ -7,4 +7,12 @@ class Home_Controller extends Controller
         $view = new View('home/home');
         echo $view->render();
     }
+    
+    public function about()
+    {
+        $view = new View('home/about');
+        echo $view->render();
+    }
 }
+
+?>
