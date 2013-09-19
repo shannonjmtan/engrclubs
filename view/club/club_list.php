@@ -19,24 +19,27 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span2">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Filter by Major</li>
-              <li><a id="All" href="#">All Disciplines</a></li>
-              <li><a id="Aerospace" href="#">Aerospace</a></li>
-              <li><a id="Bio-E" href="#">Bio-E</a></li>
-              <li><a id="Chemical" href="#">Chemical</a></li>
-              <li><a id="Civil" href="#">Civil</a></li>
-              <li><a id="Computer" href="#">Computer Science/CSE</a></li>
-              <li><a id="Electrical" href="#">Electrical</a></li>
-              <li><a id="Mat" href="#">Mat Sci</a></li>
-              <li class="nav-header">Filter by Type</li>
-              <li><a id="Community" href="#">Community Outreach</a></li>
-              <li><a id="Honor" href="#">Honor Society</a></li>
-              <li><a id="Professional" href="#">Professional</a></li>
-              <li><a id="Project" href="#">Project</a></li>
-            </ul>
-          </div>
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Filter by Major</li>
+                    
+                    <?php
+                    foreach($major_types as $major_type)
+                    {
+                        echo '<li><a id="'.$major_type->major.'" href="#">'.$major_type->major.'</a></li>';
+                    }
+                    ?>
+                    
+                    <li class="nav-header">Filter by Type</li>
+                    
+                    <?php
+                    foreach($club_types as $club_type)
+                    {
+                        echo '<li><a id="'.$club_type->name.'" href="#">'.$club_type->name.'</a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
         </div>
         <div class="span10">
             <table class="table table-bordered">

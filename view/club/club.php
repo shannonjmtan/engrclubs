@@ -61,18 +61,41 @@
                         <td>Founded</td>
                         <td><?php echo $year_founded; ?></td>
                     </tr>
-                    <?php } ?>
-                    <?php if (strlen($type) > 0) {?>
-                    <tr>
-                        <td>Type</td>
-                        <td><?php echo $type; ?></td>
-                    </tr>
-                    <?php } ?>
-                    <?php if (strlen($major) > 0) {?>
-                    <tr>
-                        <td>Major</td>
-                        <td><?php echo $major; ?></td>
-                    </tr>
+                    <?php } 
+                    
+                    if (sizeof($types) > 0)
+                    { ?>
+                    
+                        <tr>
+                            <td>Type</td>
+                            <td>
+                               
+                        <?php 
+                        foreach($types as $type) { ?>
+                            <?php echo $type; ?><br>
+                        
+                        <?php } ?>
+                        </td>
+                        </tr>
+                        
+                    <?php  
+                     } 
+                    
+                    if (sizeof($majors) > 0)
+                    { ?>
+                    
+                        <tr>
+                            <td>Majors</td>
+                            <td>
+                               
+                        <?php 
+                        foreach($majors as $major) { ?>
+                            <?php echo $major; ?><br>
+                        
+                        <?php } ?>
+                        </td>
+                        </tr>
+                        
                     <?php } ?>
                 </tbody>
             </table>
