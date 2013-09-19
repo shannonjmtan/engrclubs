@@ -41,6 +41,7 @@ class Club_Controller extends Controller
     
     public function create($done = false)
     {
+        
         if(!$done)
         {
             $view = new View('club/create');
@@ -91,7 +92,7 @@ class Club_Controller extends Controller
                 $major_model->major_type_id = $major;
                 $major_model->create();
             }*/
-            
+            var_dump($_POST);
             $view = new View('club/success');
             echo $view->render();
         }

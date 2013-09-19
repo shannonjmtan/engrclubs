@@ -27,12 +27,12 @@ Loader::init();
  * @global stdClass $CONFIG
  */
 $CONFIG = new stdClass();
-$CONFIG->title = '';
-$CONFIG->url = '';
+$CONFIG->title = 'UCLA Engineering Clubs';
+$CONFIG->url = 'http://localhost/engrclubs/www';
 $CONFIG->debug = true;
-$CONFIG->db_host = '';
-$CONFIG->db_user = '';
-$CONFIG->db_pass = '';
-$CONFIG->db_db = '';
+$CONFIG->db_host = 'localhost';
+$CONFIG->db_user = 'root';
+$CONFIG->db_pass = 'root';
+$CONFIG->db_db = 'engrclubs';
 
 @date_default_timezone_set('America/Los_Angeles');
