@@ -121,7 +121,6 @@
                       <li><a href="<?php echo URL::mvc('home', 'home'); ?>">Home</a></li>
                       <li><a href="<?php echo URL::mvc('home', 'about'); ?>">About</a></li>
                       <li><a href="<?php echo URL::mvc('club', 'club_list'); ?>">List of Groups</a></li>
-                      <li><a href="<?php echo URL::mvc('home', 'contact'); ?>">Contact</a></li>
                     </ul>
                 </div>
             </div>
