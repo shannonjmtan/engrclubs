@@ -14,11 +14,19 @@
         color: white;
     }
     
+    .nav-header {
+        font-size: 1.3em;
+    }
+    
+    table {
+        min-width: 1000px;
+    }
+    
 </style>
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span2">
+        <div class="span3">
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
                     <li class="nav-header">Filter by Major</li>
@@ -41,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <div class="span10">
+        <div class="span9">
             <table class="table table-bordered">
                 <thead>
                     <tr>

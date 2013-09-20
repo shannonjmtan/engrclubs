@@ -39,7 +39,7 @@ class Club_Controller extends Controller
         echo $view->render();   
     }
     
-    public function create($done = false)
+/*    public function create($done = false)
     {
         
         if(!$done)
@@ -50,30 +50,31 @@ class Club_Controller extends Controller
         }
         else 
         {
-            /*$club_model = new Club_Model();
-            $club_model->name = "American Indian Science and Engineering Society";
-            //$club_model->logo_path = "";
-            $club_model->website = "https://sites.google.com/site/uclaaises/home";
-            $club_model->contact = "ucla.aises@gmail.com";
-            $club_model->president = "Omar Leyva";
-            $club_model->year_founded = "1990";
+            $club_model = new Club_Model();
+            $club_model->name = "American Institute of Aeronautics and Astronautics (AIAA)";
+            $club_model->logo_path = "assets/img/aiaa.jpeg";
+            $club_model->website = "http://aiaa.seas.ucla.edu/";
+            $club_model->contact = "aiaaucla@gmail.com";
+            $club_model->president = "Aurora Garcia";
+            //$club_model->year_founded = "1946";
             
             $club_model->about = "
-            Entering its nineteenth year on campus, AISES strives to encourage American Indians to pursue careers as scientists and engineers while preserving their cultural heritage. The goal of AISES is to substantially increase the representation of American Indians and Alaskan Natives in engineering, science, and other related technology disciplines. AISES devotes most of its energy to its outreach event where members put on engineering workshops for students from local middle schools, other wise known as Youth Motivation Day. In addition, AISES also conducts tutoring at local schools to help students succeed in math. Serving as mentors and role models for younger students enables UCLA AISES students to further develop professionalism and responsibility while maintaining a high level of academic excellence and increasing cultural awareness.";
+            <p>The American Institute of Aeronautics and Astronautics (AIAA) is a professional aerospace engineering organization. With more than 31,000 members worldwide, AIAA links professionals, educators, and students together to advance the aerospace industry. The UCLA Chapter in particular focuses on enriching hands-on experiences for student engineers, building bridges between students and industry professionals, and expanding this community of one-of-a-kind professions.</p>
+            <p>AIAA's UCLA Student Chapter offers exciting projects and events for anyone interested in the aerospace industry. The Rocket Project at UCLA, Design/Build/Fly (DBF), and Unmanned Air Vehicle (UAV) are all AIAA engineering projects active throughout the year. Each project is entirely student run, and welcomes passionate engineers who love to learn and grow with dedicated and ambitious teammates. AIAA also holds fun professional networking events! In the past, we've hosted successful events such as ATK Company Tour, Lockheed Martin Game night, MAE Alumni Networking Night, and numerous company information nights. We also have social events bringing students to the Miramar Air show, kayaking, BBQs, and trips to the California Science Center. Students do no need to be aerospace engineering majors to join AIAA, and in fact we welcome students from all majors.</p>";     
             
-            $club_model->how_to_join = "Come to our meetings every other Tuesday. Email us or visit our website to find out when the first meeting is.";
+            $club_model->how_to_join = "For more information about becoming a part of the AIAA UCLA Chapter, please visit our website and attend the AIAA Kick-off Meeting.
+";
             
             $club_model->upcoming_events = "<ul>
-            <li>Biweekly Meetings</li>
-            <li>Weekly Tutoring Sessions</li>
-            <li>Youth Motivation Day</li>
-            <li>Frybread Fundraisers</li>
+            <li>AIAA Kick-off Meeting</li>
+            <li>Project Kick-off Meetings</li>
+            <li>Internship Insider Night</li>
             </ul>
             ";
             
             $club_model->create();
             
-            $types = array(4);
+            $types = array(2, 3);
             
             foreach($types as $type)
             {
@@ -83,7 +84,7 @@ class Club_Controller extends Controller
                 $type_model->create();
             }
             
-            $majors = array(1);
+            $majors = array(2);
             
             foreach($majors as $major)
             {
@@ -91,12 +92,13 @@ class Club_Controller extends Controller
                 $major_model->club_id = $club_model->id;
                 $major_model->major_type_id = $major;
                 $major_model->create();
-            }*/
+            }
+            
             var_dump($_POST);
             $view = new View('club/success');
             echo $view->render();
-        }
-    }
+        
+    }*/
     
     public function club_list()
     {
