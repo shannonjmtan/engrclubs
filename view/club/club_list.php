@@ -18,9 +18,6 @@
         font-size: 1.3em;
     }
     
-    table {
-        min-width: 1000px;
-    }
     
 </style>
 
