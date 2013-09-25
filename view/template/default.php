@@ -13,14 +13,14 @@
     
 <style type="text/css">
     body {
-        min-width: 100px;
+        min-width: 300px;
         font-family: "Courier New", Courier, monospace;
     }
     
     .content {
         padding-top: 11%;
         padding-bottom: 11%;
-        min-width: 100px;
+        min-width: 300px;
     }
     
     .btn {
