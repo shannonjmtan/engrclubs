@@ -7,7 +7,7 @@
     }
 
     .hero-unit > h1 {
-        font-size: 4em;
+        font-size: 3em;
         padding-left: 0%;
     }
     

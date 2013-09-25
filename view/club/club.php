@@ -1,12 +1,10 @@
 <style type="text/css">
     .logo {
-        max-height: 90%;
         max-width: 90%;
         width: auto;
         height: auto;
         padding-bottom: 50px;
-        min-height: 50%;
-        min-width: 50%;
+        min-width: 60%;
         margin-left: auto;
         margin-right: auto;
         display: block;
