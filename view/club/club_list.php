@@ -1,4 +1,4 @@
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 
 <style type="text/css">
     .span2 {
